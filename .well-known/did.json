@@ -1,1 +1,48 @@
-
+{
+  "id": "did:web:purple-ocean-0ee89751e.3.azurestaticapps.net",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:purple-ocean-0ee89751e.3.azurestaticapps.net"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://purple-ocean-0ee89751e.3.azurestaticapps.net/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/78169ba8-9c18-434f-b161-578e1aa87b14"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#a4452c99bdf749a58f0a10bcf3ba8f76vcSigningKey-8d656",
+      "controller": "did:web:purple-ocean-0ee89751e.3.azurestaticapps.net",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "MPORGhOyYX4kBT51EeDJ1oEflNrs2Uf1V5Ch_M1AzOM",
+        "y": "iDS90gHw5CfGwT3U2aN2Nl0iMnUttlMznHcRb0G4HTk"
+      }
+    }
+  ],
+  "authentication": [
+    "#a4452c99bdf749a58f0a10bcf3ba8f76vcSigningKey-8d656"
+  ],
+  "assertionMethod": [
+    "#a4452c99bdf749a58f0a10bcf3ba8f76vcSigningKey-8d656"
+  ]
+}
